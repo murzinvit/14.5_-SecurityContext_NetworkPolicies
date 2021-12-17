@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nginx-pod-2-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      name: nginx-pod-2-lbl
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          name: nginx-pod-1-lbl
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          name: nginx-pod-1-lbl
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          namespace: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
