@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nginx-pod-1-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      name: nginx-pod-1-lbl
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          name: nginx-pod-2-lbl
