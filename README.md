@@ -21,7 +21,7 @@ uid=1000 gid=3000 groups=3000
 Результат после применения NetworkPolicy для Pod_2. На IP адрес Pod_1 curl возможен, на mail.ru - нет: </br>
 ![](https://github.com/murzinvit/screen_1/blob/926e4813e51d97e419d88c4cfb0bb7dec6e925a3/Kuber_curl_from_n2_after_policy.jpg) </br>
 Результат после применения NetworkPolicy для контейнера Pod_1. На IP Pod_2 curl возможен, mail.ru также доступен: </br>
-
+![](https://github.com/murzinvit/screen_1/blob/de8c90ba4923144c95dabdc3ab7a532b1ebfe04c/Kuber_get_policy_front.jpg) </br>
 
 ---
 ### work notes
