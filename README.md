@@ -18,6 +18,5 @@ uid=1000 gid=3000 groups=3000
 ---
 ### work notes
 По умолчанию политика kubernetes - разрешить всё </br>
-
-
+https://habr.com/ru/company/flant/blog/443190/ </br>
 
